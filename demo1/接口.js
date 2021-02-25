@@ -12,25 +12,28 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var Perso = /** @class */ (function () {
-    function Perso(name) {
+var Programmer = /** @class */ (function () {
+    function Programmer(name) {
         this.name = name;
     }
-    Perso.prototype.run = function () {
-        return this.name + " \u5728\u8DD1\u6B65";
+    Programmer.prototype.coding = function (code) {
+        console.log(this.name + code);
     };
-    return Perso;
+    return Programmer;
 }());
-var Web = /** @class */ (function (_super) {
-    __extends(Web, _super);
-    function Web(name) {
+var Webs = /** @class */ (function (_super) {
+    __extends(Webs, _super);
+    function Webs(name) {
         return _super.call(this, name) || this;
     }
-    Web.prototype.work = function () {
-        console.log(this.name + " \u5728\u8DD1\u6B65");
+    Webs.prototype.eats = function () {
+        console.log(this.name + '喜欢吃馒头');
     };
-    return Web;
-}(Perso));
-var w = new Web('Ting');
-w.run();
-w.work();
+    Webs.prototype.work = function () {
+        console.log(this.name + '写代码');
+    };
+    return Webs;
+}(Programmer));
+var ww = new Webs('小李');
+// w.eat();
+ww.coding('写ts代码');

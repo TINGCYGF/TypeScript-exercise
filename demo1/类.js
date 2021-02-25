@@ -1,34 +1,36 @@
-function Person(){
-  this.name = 'Ting'; //属性
-  //实例方法
-  this.run = function (){
-    console.log('hi');
-  }
-}
-//添加静态方法
-Person.getInfo = function (){
-  console.log('我是静态方法');
-}
-Person.prototype.work = function (){
-  console.log('haha');
-}
-
-let p = new Person()
-
-// 继承（原型链+对象冒充组合继承模式）
-
-function Web(){
-  Person.call(this);
-}
-
-let w = new Web();
-w.run(); //可以继承构造函数的属性和方法
-w.work(); //不可以继承原型链上的方法
-
-//原型链继承
-function Web2(){}
-
-Web2.prototype = new Person();//原型链继承
-let b = new Web2();
-b.run();
-b.work();//方法都可以继承
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var Perso = /** @class */ (function () {
+    function Perso(name) {
+        this.name = name;
+    }
+    Perso.prototype.run = function () {
+        return this.name + " \u5728\u8DD1\u6B65";
+    };
+    return Perso;
+}());
+var Web = /** @class */ (function (_super) {
+    __extends(Web, _super);
+    function Web(name) {
+        return _super.call(this, name) || this;
+    }
+    Web.prototype.work = function () {
+        console.log(this.name + " \u5728\u8DD1\u6B65");
+    };
+    return Web;
+}(Perso));
+var w = new Web('Ting');
+w.run();
+w.work();

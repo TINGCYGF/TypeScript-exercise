@@ -1,4 +1,4 @@
-class Person{
+class Person2{
     name:string;  /*私有*/
     constructor(name:string){
         this.name=name;

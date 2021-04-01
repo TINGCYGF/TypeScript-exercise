@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@types/jquery": "^3.5.5"
+  },
+  "dependencies": {
+    "nestjs-mongoose-quick-crud": "^1.0.0"
+  }
+}

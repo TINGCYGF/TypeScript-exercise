@@ -67,8 +67,5 @@
     "strict": true,
     //在代码中注入“use strict”
     "alwaysStrict": true,
-
-    //在代码中注入“use strict”
-    "alwaysStrict": true
   }
 }

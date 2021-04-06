@@ -1,0 +1,24 @@
+{
+  "name": "Ts-Babel",
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src --out-dir dist --extensions \".ts,.tsx\" ",
+    "type-check": "tsc --watch"
+  },
+  "keywords": [
+    "TypeScript"
+  ],
+  "author": "",
+  "licenses": [],
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "typescript": "^4.2.3"
+  }
+}
